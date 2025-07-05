@@ -3,12 +3,12 @@
 This guide will help you installing the Qubic Ledger app on your device.
 
 > [!IMPORTANT]
-> Tests are only possible on the following devices: Nano S Plus, Flex and Stax 
+> Tests are only possible on the following devices: Nano S Plus, Flex and Stax.\
 > In production, Nano X will also be supported, unfortunately Nano S won't as it's discontinued by Ledger.
 
 > [!CAUTION]
-> The installation requires technical knowledge (using the terminal).
-> Install only on devices which are NOT used for relevant crypto holding.
+> The installation requires technical knowledge (using the terminal).\
+> Install only on devices which are NOT used for relevant crypto holding.\
 > Installation at your own risk.
 
 ## Installation Steps
@@ -30,11 +30,19 @@ on macOS : `source ledger/bin/activate`
 for other environments: https://docs.python.org/3/library/venv.html#how-venvs-work
 
 ```
-# Install Ledgerblue (tool to load the app)
-python3 -m pip install ledgerblue 
-# Load the app.
-python3 -m ledgerblue.runScript --scp --fileName bin/app.apdu --elfFile bin/app.elf
+# Install Ledgerblue (tool to load the app):
+python3 -m pip install ledgerblue
+
+# Load/install the app on the device:
+# IMPORTANT: the zip file includes multiple folders for the different Ledger devices,\
+# you need to reference the right one in the command below for "fileName" and "elfFile".\
+# This is different based on device and from where in the file system you run the command.
+python3 -m ledgerblue.runScript --scp --fileName .flex/bin/app.apdu --elfFile .flex/bin/app.elf
 ```
+
+> [!NOTE]
+> You are installing an unsigned app (it hasn't been verified by Ledger yet) - therefore your device may ask you to confirm the use of an "unsave" app.
+
 5) Go to https://hw.qubic.org/ and interact with the device, create new addresses, send QUBIC back and forth. If you'd like to received some test tokens, let us know in the LFG channel in Discord.
 
 
