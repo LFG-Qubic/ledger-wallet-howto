@@ -28,4 +28,4 @@ After connecting your device, the Addresses tab will be empty at first: Click on
 ![enter image description here](images/006_TX_Status_Screen.png)
 
 ### Support
-In case of any questions, post them in the `#lfg` channel in the [Qubic Discord](http://discord.gg/qubic). # ledger-wallet-howto
+In case of any questions, post them in the [Qubic Discord](http://discord.gg/qubic). # ledger-wallet-howto
